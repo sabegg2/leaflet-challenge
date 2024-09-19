@@ -6,9 +6,7 @@ In this challenge, we were tasked with developing a way to visualize USGS earthq
 
 Part 1: Create the Earthquake Visualization
 
-Part 2: Plot Tectonic Plates, Add Other Base Maps, Add Layer Controls
-
-Part 2 is completely optional.
+Part 2: Plot Tectonic Plates, Add Other Base Maps, Add Layer Controls (optional)
 
 ## Files
 
