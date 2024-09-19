@@ -8,6 +8,12 @@ Part 1: Create the Earthquake Visualization
 
 Part 2: Plot Tectonic Plates, Add Other Base Maps, Add Layer Controls (optional)
 
+## GitHub Pages
+
+I deployed my repository to GitHub Pages. The interactive dashboard I created in this assignment can be displayed and interacted with at the following link:
+
+https://sabegg2.github.io/leaflet-challenge/
+
 ## Files
 
 The files for my earthquake visualization are:
