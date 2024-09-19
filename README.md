@@ -9,3 +9,7 @@ The USGS is interested in building a new set of tools that will allow them to vi
 Part 1: Create the Earthquake Visualization
 
 Part 2: Gather and Plot More Data (Optional with no extra points earning)
+
+Plot a second dataset on your map to illustrate the relationship between tectonic plates and seismic activity. You will need to pull in this dataset and visualize it alongside your original data. Data on tectonic plates can be found at https://github.com/fraxen/tectonicplatesLinks to an external site..
+
+This part is completely optional; you can complete this part as a way to challenge yourself and boost your new skills.
