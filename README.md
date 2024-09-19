@@ -18,7 +18,7 @@ The files for my earthquake visualization are:
 
 [style.css](Leaflet-Parts-1and2/static/css/style.css)
 
-The index.html file is the one that creates the webpage. The logic.js file  contains JavaScript code that handles the core logic of a web application and specific functionality within it. The style.css file contains the CSS (Cascading Style Sheets) code used to style and layout the HTML elements of the web page.
+The index.html file is the main HTML file for the web application, providing the basic structure of the web application and including references to the logic.js and style.css files. The logic.js file contains JavaScript code that handles the core logic of a web application and specific functionality within it. The style.css file contains the CSS (Cascading Style Sheets) code used to style and layout the HTML elements of the web page.
 
 ## The map
 
