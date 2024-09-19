@@ -15,7 +15,9 @@ Part 2 is completely optional.
 The files for my earthquake visualization are:
 
 [index.html](Leaflet-Parts-1and2/index.html)
+
 [logic.js](Leaflet-Parts-1and2/static/js/logic.js)
+
 [style.css](Leaflet-Parts-1and2/static/css/style.css)
 
 The index.html file is the one that creates the webpage. The logic.js file  contains JavaScript code that handles the core logic of a web application and specific functionality within it. The style.css file contains the CSS (Cascading Style Sheets) code used to style and layout the HTML elements of the web page.
