@@ -30,6 +30,6 @@ The index.html file is the main HTML file for the web application, providing the
 
 The following images show what the earthquake map looks like. The second map shows a different map option and the tectonic plates layer which illustrates the relationship between tectonic plates and seismic activity.
 
-<img src="images\map.png" width=600>
+<img src="images\map.png" width=900>
 
-<img src="images\map_with_tectonic_plates.png" width=600>
+<img src="images\map_with_tectonic_plates.png" width=900>
