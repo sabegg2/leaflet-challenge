@@ -2,14 +2,34 @@
 - Module 15 Challenge
 - Steph Abegg
 
-The United States Geological Survey, or USGS for short, is responsible for providing scientific data about natural hazards, the health of our ecosystems and environment, and the impacts of climate and land-use change. Their scientists develop new methods and tools to supply timely, relevant, and useful information about the Earth and its processes.
-
-The USGS is interested in building a new set of tools that will allow them to visualize their earthquake data. They collect a massive amount of data from all over the world each day, but they lack a meaningful way of displaying it. In this challenge, you have been tasked with developing a way to visualize USGS data that will allow them to better educate the public and other government organizations (and hopefully secure more funding) on issues facing our planet.
+In this challenge, we were tasked with developing a way to visualize USGS earthquake data using leaflet. This challenge had two parts:
 
 Part 1: Create the Earthquake Visualization
 
-Part 2: Gather and Plot More Data (Optional with no extra points earning)
+Part 2: Plot Tectonic Plates, Add Other Base Maps, Add Layer Controls (optional)
 
-Plot a second dataset on your map to illustrate the relationship between tectonic plates and seismic activity. You will need to pull in this dataset and visualize it alongside your original data. Data on tectonic plates can be found at https://github.com/fraxen/tectonicplatesLinks to an external site..
+## GitHub Pages
 
-This part is completely optional; you can complete this part as a way to challenge yourself and boost your new skills.
+I deployed my repository to GitHub Pages. The interactive dashboard I created in this assignment can be displayed and interacted with at the following link:
+
+https://sabegg2.github.io/leaflet-challenge/
+
+## Files
+
+The files for my earthquake visualization are:
+
+[index.html](Leaflet-Parts-1and2/index.html)
+
+[logic.js](Leaflet-Parts-1and2/static/js/logic.js)
+
+[style.css](Leaflet-Parts-1and2/static/css/style.css)
+
+The index.html file is the main HTML file for the web application, providing the basic structure of the web application and including references to the logic.js and style.css files. The logic.js file contains JavaScript code that handles the core logic of a web application and specific functionality within it. The style.css file contains the CSS (Cascading Style Sheets) code used to style and layout the HTML elements of the web page.
+
+## The map
+
+The following images show what the earthquake map looks like. The second map shows a different map option and the tectonic plates layer which illustrates the relationship between tectonic plates and seismic activity.
+
+<img src="images\map.png" width=600>
+
+<img src="images\map_with_tectonic_plates.png" width=600>
