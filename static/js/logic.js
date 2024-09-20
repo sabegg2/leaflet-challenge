@@ -77,7 +77,7 @@ d3.json(earthquakesURL, function(earthquakeData) {
         return "gold";
       case depth > 10:
         return "yellow";
-      default:
+      default: // depth -10 to 10
         return "lightgreen";
     }
   }
@@ -117,7 +117,7 @@ d3.json(earthquakesURL, function(earthquakeData) {
     //tectonicplates.addTo(myMap); // uncomment if this layer is to be shown on load along with earthquakes
   });
 
-  // Add legend
+  // Create and add legend
   var legend = L.control({position: "bottomright"});
 
   legend.onAdd = function() {

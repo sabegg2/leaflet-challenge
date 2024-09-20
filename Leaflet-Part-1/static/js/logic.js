@@ -51,7 +51,7 @@ d3.json(earthquakesURL, function(earthquakeData) {
         return "gold";
       case depth > 10:
         return "yellow";
-      default:
+      default: // depth -10 to 10
         return "lightgreen";
     }
   }
@@ -82,7 +82,7 @@ d3.json(earthquakesURL, function(earthquakeData) {
   // Send earthquakes layer to the map
   earthquakes.addTo(myMap);
 
-  // Add legend
+  // Create and add legend
   var legend = L.control({position: "bottomright"});
 
   legend.onAdd = function() {
