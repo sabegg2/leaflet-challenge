@@ -102,7 +102,7 @@ d3.json(earthquakesURL, function(earthquakeData) {
       layer.bindPopup("<h4>Location: " + feature.properties.place 
         + "</h4><hr>Date: " + new Date(feature.properties.time) 
         + "<br>Magnitude: " + feature.properties.mag 
-        + "<br>Depth: " + feature.geometry.coordinates[2] );
+        + "<br>Depth: " + feature.geometry.coordinates[2] + " m" );
     }
   }).addTo(earthquakes);
   // Send earthquakes layer to the map
@@ -127,7 +127,7 @@ d3.json(earthquakesURL, function(earthquakeData) {
       
       div.innerHTML = "<h4>Depth Legend (m)</h4><hr/>"
   
-      for (var i=0; i < depths.length; i++) {
+      for (let i=0; i < depths.length; i++) {
         div.innerHTML += 
         '<div class="box" style="background-color:'+ markerColor(depths[i] + 1) +'"></div> ' +
             depths[i] + (depths[i + 1] ? '&ndash;' + depths[i + 1] + '<br>' : '+');  // condition ? expressionIfTrue : expressionIfFalse
