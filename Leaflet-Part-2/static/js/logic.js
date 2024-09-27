@@ -1,47 +1,47 @@
 // Define earthquakes and tectonic plates GeoJSON url variables
-var earthquakesURL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
-var tectonicplatesURL = "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json"
+let earthquakesURL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
+let tectonicplatesURL = "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json"
 
 // Create two layerGroups
-var earthquakes = L.layerGroup();
-var tectonicplates = L.layerGroup();
+let earthquakes = L.layerGroup();
+let tectonicplates = L.layerGroup();
 
 // Create satellite tile
-var satelliteMap = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/tile/{z}/{y}/{x}', {
+let satelliteMap = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/tile/{z}/{y}/{x}', {
   minZoom: 2,
   maxZoom: 12,
   attribution: 'Tiles courtesy of the <a href="https://usgs.gov/">U.S. Geological Survey</a>'
 });
 
 // Create topo tile
-var openTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+let openTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
   minZoom: 2,
   maxZoom: 12,
   attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
 });
 
 // Create street tile
-var openStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+let openStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   minZoom: 2,
   maxZoom: 12,
   attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 });
 
 // Create baseMaps object
-var baseMaps = {
+let baseMaps = {
   "Satellite" : satelliteMap,
   "OpenTopo": openTopoMap,
   "OpenStreet": openStreetMap
 };
 
 // Create overlayMaps object to hold the overlay layers
-var overlayMaps = {
+let overlayMaps = {
   "Earthquakes": earthquakes,
   "Tectonic Plates": tectonicplates
 };
 
 // Create the map, giving it the satelliteMap and earthquakes layers to display on load
-var myMap = L.map("map", {
+let myMap = L.map("map", {
   center: [0, 0],
   zoom: 2,
   layers: [satelliteMap, earthquakes]
@@ -118,10 +118,10 @@ d3.json(earthquakesURL, function(earthquakeData) {
   });
 
   // Create and add legend
-  var legend = L.control({position: "bottomright"});
+  let legend = L.control({position: "bottomright"});
 
   legend.onAdd = function() {
-      var div = L.DomUtil.create("div", "info legend"),
+      let div = L.DomUtil.create("div", "info legend"),
 
       depths = [-10, 10, 30, 50, 70, 90];
       
@@ -129,7 +129,7 @@ d3.json(earthquakesURL, function(earthquakeData) {
   
       for (let i=0; i < depths.length; i++) {
         div.innerHTML += 
-        '<div class="box" style="background-color:'+ markerColor(depths[i] + 1) +'"></div> ' +
+        '<div class="box" style="background-color:'+ markerColor(depths[i] + 1) +'"></div> ' + // class box defined in .css file
             depths[i] + (depths[i + 1] ? '&ndash;' + depths[i + 1] + '<br>' : '+');  // condition ? expressionIfTrue : expressionIfFalse
         }
 

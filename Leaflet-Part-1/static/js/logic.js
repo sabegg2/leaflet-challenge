@@ -1,28 +1,28 @@
 // Define earthquakes and tectonic plates GeoJSON url variables
-var earthquakesURL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
+let earthquakesURL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 
 // Create two layerGroups
-var earthquakes = L.layerGroup();
+let earthquakes = L.layerGroup();
 
 // Create street tile
-var openStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+let openStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   minZoom: 2,
   maxZoom: 12,
   attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 });
 
 // Create baseMaps object
-var baseMaps = {
+let baseMaps = {
   "OpenStreet": openStreetMap
 };
 
 // Create overlayMaps object to hold the overlay layers
-var overlayMaps = {
+let overlayMaps = {
   "Earthquakes": earthquakes,
 };
 
 // Create the map, giving it the satelliteMap and earthquakes layers to display on load
-var myMap = L.map("map", {
+let myMap = L.map("map", {
   center: [0, 0],
   zoom: 2,
   layers: [openStreetMap, earthquakes]
@@ -83,10 +83,10 @@ d3.json(earthquakesURL, function(earthquakeData) {
   earthquakes.addTo(myMap);
 
   // Create and add legend
-  var legend = L.control({position: "bottomright"});
+  let legend = L.control({position: "bottomright"});
 
   legend.onAdd = function() {
-      var div = L.DomUtil.create("div", "info legend"),
+      let div = L.DomUtil.create("div", "info legend"),
 
       depths = [-10, 10, 30, 50, 70, 90];
       
@@ -94,7 +94,7 @@ d3.json(earthquakesURL, function(earthquakeData) {
   
       for (let i=0; i < depths.length; i++) {
         div.innerHTML += 
-        '<div class="box" style="background-color:'+ markerColor(depths[i] + 1) +'"></div> ' +
+        '<div class="box" style="background-color:'+ markerColor(depths[i] + 1) +'"></div> ' + // class box defined in .css file
             depths[i] + (depths[i + 1] ? '&ndash;' + depths[i + 1] + '<br>' : '+');  // condition ? expressionIfTrue : expressionIfFalse
         }
 
