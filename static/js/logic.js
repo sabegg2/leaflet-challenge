@@ -122,7 +122,7 @@ d3.json(earthquakesURL, function(earthquakeData) {
   let legend = L.control({position: "bottomright"});
 
   legend.onAdd = function() {
-    let div = L.DomUtil.create("div", "info legend"),
+      let div = L.DomUtil.create("div", "info legend"),
 
       depths = [-10, 10, 30, 50, 70, 90];
       
@@ -132,7 +132,7 @@ d3.json(earthquakesURL, function(earthquakeData) {
         div.innerHTML += 
         '<div class="box" style="background-color:'+ markerColor(depths[i] + 1) +'"></div> ' + // class box defined in .css file
             depths[i] + (depths[i + 1] ? '&ndash;' + depths[i + 1] + '<br>' : '+');  // condition ? expressionIfTrue : expressionIfFalse
-        }
+      }
 
       return div;
   };
